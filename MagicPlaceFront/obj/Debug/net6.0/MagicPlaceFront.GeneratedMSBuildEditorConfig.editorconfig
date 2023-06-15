@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MagicPlaceFront
+build_property.RootNamespace = MagicPlaceFront
+build_property.ProjectDir = D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Occupant/AddOccupant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2NjdXBhbnRcQWRkT2NjdXBhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Occupant/DeleteOccupant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2NjdXBhbnRcRGVsZXRlT2NjdXBhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Occupant/IndexOccupants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2NjdXBhbnRcSW5kZXhPY2N1cGFudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Occupant/UpdateOccupant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2NjdXBhbnRcVXBkYXRlT2NjdXBhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Room/CreateRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxDcmVhdGVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Room/DeleteRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxEZWxldGVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Room/IndexRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxJbmRleFJvb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Room/UpdateRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxVcGRhdGVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Shared/_NotifiedSciptPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmllZFNjaXB0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devnorth/1_DotNet/1_backend/1_microservicios_web_api/magicPlace/MagicPlaceFront/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zpoj63wyx7

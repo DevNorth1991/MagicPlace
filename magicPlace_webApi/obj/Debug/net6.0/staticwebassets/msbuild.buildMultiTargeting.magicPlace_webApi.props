@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\magicPlace_webApi.props" />
+</Project>

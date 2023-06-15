@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\magicPlace_webApi.props" />
+</Project>

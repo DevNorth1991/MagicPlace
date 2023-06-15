@@ -1,0 +1,184 @@
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\appsettings.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.exe
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.deps.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.runtimeconfig.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.AssemblyReference.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfoInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfo.cs
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CoreCompileInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.magicPlace_webApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.build.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\scopedcss\bundle\magicPlace_webApi.styles.css
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CopyComplete
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\refint\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.genruntimeconfig.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\obj\Debug\net6.0\ref\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\appsettings.Development.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\appsettings.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.exe
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.deps.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.runtimeconfig.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.pdb
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.AssemblyReference.cache
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfoInputs.cache
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfo.cs
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CoreCompileInputs.cache
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cs
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cache
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.magicPlace_webApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.build.magicPlace_webApi.props
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.magicPlace_webApi.props
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.magicPlace_webApi.props
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\scopedcss\bundle\magicPlace_webApi.styles.css
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CopyComplete
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\refint\magicPlace_webApi.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.pdb
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.genruntimeconfig.cache
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\obj\Debug\net6.0\ref\magicPlace_webApi.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Humanizer.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\AutoMapper.dll
+C:\AREA DE TRABAJO\Barrera\Proyectos\.NET\magicPlace\magicPlace_webApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\appsettings.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.exe
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.deps.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.runtimeconfig.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\magicPlace_webApi.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\AutoMapper.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Humanizer.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.AssemblyReference.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfoInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.AssemblyInfo.cs
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CoreCompileInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.magicPlace_webApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.build.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.magicPlace_webApi.props
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\scopedcss\bundle\magicPlace_webApi.styles.css
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.csproj.CopyComplete
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\refint\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.genruntimeconfig.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\ref\magicPlace_webApi.dll

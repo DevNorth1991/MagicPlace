@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MagicPlaceFront.Models.Dto.OccupantDto>
+@{
+    ViewData["Title"] = "IndexOccupants";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-4 border">
+
+    <div class="row pb-2 ">
+
+        <div class="col">
+            <h1 class="text-primary">Occupants's List</h1>
+        </div>
+
+        <div class="col pt-1 text-end ">
+            <a asp-controller="Occupant" asp-action="AddOccupant" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i> Add new Occupant</a>
+        </div>
+
+
+    </div>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Name Room</th>
+                <th>Room Id</th>
+                <th>idCard Ocupant</th>
+                <th>Name Occupant</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.ObjRoom.Name</td>
+                    <td>@item.ObjRoom.Id</td>
+                    <td>@item.IdCard</td>
+                    <td>@item.NameOccupant</td>
+                    <td>
+                        <a asp-controller="Occupant" asp-action="UpdateOccupant" asp-route-IdCard="@item.IdCard" class="btn btn-outline-secondary  btn-sm"><i class="bi bi-pen-fill"></i></a>
+                        <a asp-controller="Occupant" asp-action="DeleteOccupant" asp-route-IdCard="@item.IdCard" class="btn btn-outline-danger  btn-sm"><i class="bi bi-trash-fill"></i></a>
+
+
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+

@@ -1,0 +1,12 @@
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\bin\Debug\net6.0\MagicPlace_Utilities.deps.json
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\bin\Debug\net6.0\MagicPlace_Utilities.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\bin\Debug\net6.0\MagicPlace_Utilities.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.csproj.AssemblyReference.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.AssemblyInfoInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.AssemblyInfo.cs
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.csproj.CoreCompileInputs.cache
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\refint\MagicPlace_Utilities.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\MagicPlace_Utilities.pdb
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\Utilities\obj\Debug\net6.0\ref\MagicPlace_Utilities.dll

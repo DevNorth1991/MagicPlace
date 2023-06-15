@@ -1,0 +1,107 @@
+﻿@model MagicPlaceFront.Models.Dto.RoomCreateDto;
+@{
+    ViewData["Title"] = "CreateRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-action="CreateRoom">
+
+
+    <div class="container border p-3">
+
+        @* ahora usaremos un tagHelper quien se va a encagar de verificar que los datos del form completen el modelo*@
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <h2 class=" text-info">Create new Room</h2>
+        </div>
+
+        @* Name*@
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label">Nombre de la Habitaci&oacute;n</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        @* Detail*@
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label">Valor de la Habitaci&oacute;n Por dia</label>
+                <input asp-for="Fee" class="form-control" />
+                <span asp-validation-for="Fee" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        @* Imagen*@
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label"> Imagenes </label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        @*metros cuadrados*@
+
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label"> Medidas de Habitaci&oacute;n </label>
+                <input asp-for="SquareMeters" class="form-control" />
+                <span asp-validation-for="SquareMeters" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        @* occupants*@
+
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label"> Cantidad de Ocupantes </label>
+                <input asp-for="Occupants" class="form-control" />
+                <span asp-validation-for="Occupants" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        @* detail*@
+        <div class="row mt-2">
+
+            <div class="col-md-6">
+                <label class="form-label">Detalles de la Habitaci&oacute;n</label>
+                <textarea asp-for="Detail" class="form-control"></textarea>
+                <span asp-validation-for="Detail" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        <div class="d-grid gap-2 d-md-block mt-2">
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-controller="Room" asp-action="IndexRoom" class="btn btn-success">Back To List</a>
+
+        </div>
+    </div>
+
+
+</form>
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial"/>
+}

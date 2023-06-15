@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MagicPlaceFront.Models.Dto.RoomDto>
+
+@{
+    ViewData["Title"] = "IndexRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-4 border">
+
+    <div class="row pb-2 ">
+
+        <div class="col">
+            <h1 class="text-primary">Room's List</h1>
+        </div>
+
+        <div class="col pt-1 text-end ">
+            <a asp-controller="Room" asp-action="CreateRoom" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i> Create new Room</a>
+        </div>
+
+
+    </div>
+    
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Occupants</th>
+                    <th>Price</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach  (var item in Model)
+                {
+                    
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Occupants</td>
+                        <td>@((item.Fee).ToString("c"))</td>
+                        <td>
+                        <a asp-controller="Room" asp-action="UpdateRoom" asp-route-id="@item.Id" class="btn btn-outline-secondary  btn-sm"><i class="bi bi-pen-fill"></i></a>
+                        <a asp-controller="Room" asp-action="DeleteRoom" asp-route-id="@item.Id" class="btn btn-outline-danger  btn-sm"><i class="bi bi-trash-fill"></i></a>
+
+
+                        </td>
+                    </tr>
+                
+                }
+
+            </tbody>
+
+        </table>
+
+</div>
+
