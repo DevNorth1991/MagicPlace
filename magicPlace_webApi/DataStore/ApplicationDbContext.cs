@@ -15,6 +15,9 @@ namespace magicPlace_webApi.DataStore
         public DbSet<Room> Rooms { get; set; }
 
         public DbSet<Occupant> Occupants { get; set; }
+        
+        public DbSet<User> Users { get; set; }
+
 
         //aqui vamos a sobrescribir Un metodo OnModel Creating para crear nuestros registros p[or defecto 
 

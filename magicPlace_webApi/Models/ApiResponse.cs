@@ -5,6 +5,14 @@ namespace magicPlace_webApi.Models
     public class ApiResponse
     {
 
+
+
+        public ApiResponse()
+        {
+
+            ErrorMessages= new List<string>();
+        }
+
         public HttpStatusCode statusCode { get; set; }
 
         public bool isSucces { get; set; } = true;

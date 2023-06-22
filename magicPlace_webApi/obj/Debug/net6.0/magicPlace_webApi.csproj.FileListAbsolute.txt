@@ -182,3 +182,4 @@ D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_we
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.pdb
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\magicPlace_webApi.genruntimeconfig.cache
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\obj\Debug\net6.0\ref\magicPlace_webApi.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\magicPlace_webApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

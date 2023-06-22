@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using magicPlace_webApi.Repository.IRepository;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MagicPlace_WebApi.Controllers
 {
@@ -49,6 +50,7 @@ namespace MagicPlace_WebApi.Controllers
 
 
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ApiResponse>> GetOccupants()
         {
@@ -82,6 +84,8 @@ namespace MagicPlace_WebApi.Controllers
 
 
         [HttpGet("{id:int}", Name = "GetOccupant")]
+        [Authorize]
+
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -137,6 +141,8 @@ namespace MagicPlace_WebApi.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles ="admin")]
+
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -227,6 +233,8 @@ namespace MagicPlace_WebApi.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -277,6 +285,8 @@ namespace MagicPlace_WebApi.Controllers
         //volvemos a utilizar Un IActionResult ya que retornaremos un no content y no pprecisaremos el modelo 
 
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -371,6 +381,8 @@ namespace MagicPlace_WebApi.Controllers
          
 
         [HttpPatch("{id:int}")]
+        [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
