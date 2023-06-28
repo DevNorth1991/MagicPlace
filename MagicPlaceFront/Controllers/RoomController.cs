@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MagicPlace_Utilities;
 using MagicPlaceFront.Models;
 using MagicPlaceFront.Models.Dto;
 using MagicPlaceFront.Services.IServices;
@@ -26,7 +27,7 @@ namespace MagicPlaceFront.Controllers
         {
 
             List<RoomDto> roomList = new();
-            var response = await _roomServices.GetAll<ApiResponse>();
+            var response = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -59,7 +60,7 @@ namespace MagicPlaceFront.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await _roomServices.Create<ApiResponse>(dto);
+                var response = await _roomServices.Create<ApiResponse>(dto, HttpContext.Session.GetString(SD.SessionToken));
 
                 if (response != null && response.isSucces)
                 {
@@ -76,7 +77,7 @@ namespace MagicPlaceFront.Controllers
 
         public async Task<IActionResult> UpdateRoom(int id)
         {
-            var response = await _roomServices.GetById<ApiResponse>(id);
+            var response = await _roomServices.GetById<ApiResponse>(id, HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -97,7 +98,7 @@ namespace MagicPlaceFront.Controllers
 
             if (ModelState.IsValid) { 
 
-                var response = await _roomServices.Update<ApiResponse>(roomToUpdate);
+                var response = await _roomServices.Update<ApiResponse>(roomToUpdate, HttpContext.Session.GetString(SD.SessionToken));
 
                 if (response != null && response.isSucces) {
 
@@ -118,7 +119,7 @@ namespace MagicPlaceFront.Controllers
 
         public async Task<IActionResult> DeleteRoom(int id)
         {
-            var response = await _roomServices.GetById<ApiResponse>(id);
+            var response = await _roomServices.GetById<ApiResponse>(id, HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -141,7 +142,7 @@ namespace MagicPlaceFront.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await _roomServices.DeleteById<ApiResponse>(roomDto.Id);
+                var response = await _roomServices.DeleteById<ApiResponse>(roomDto.Id , HttpContext.Session.GetString(SD.SessionToken));
 
                 if (response != null && response.isSucces)
                 {

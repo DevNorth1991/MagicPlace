@@ -1,13 +1,8 @@
-﻿using magicPlace_webApi.DataStore;
+﻿
 using magicPlace_webApi.Models.Dto;
-using magicPlace_webApi.DataStore;
 using magicPlace_webApi.Models;
-using magicPlace_webApi.Models.Dto;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using magicPlace_webApi.Repository.IRepository;
 using System.Net;
@@ -46,8 +41,8 @@ namespace MagicPlace_WebApi.Controllers
 
 
 
-        [HttpGet]
-        [Authorize]
+         [HttpGet]
+         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ApiResponse>> GetRooms()
         {

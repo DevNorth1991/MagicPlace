@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MagicPlace_Utilities;
 using MagicPlaceFront.Models;
 using MagicPlaceFront.Models.Dto;
 using MagicPlaceFront.Models.ViewModel;
@@ -35,7 +36,7 @@ namespace MagicPlaceFront.Controllers
 
             List<OccupantDto> listOccupants = new();
 
-            var response = await _services.GetAll<ApiResponse>();
+            var response = await _services.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -58,7 +59,7 @@ namespace MagicPlaceFront.Controllers
 
             //obtenemos las habitaciones 
 
-            var response = await _roomServices.GetAll<ApiResponse>();
+            var response = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -86,7 +87,7 @@ namespace MagicPlaceFront.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await _services.Create<ApiResponse>(modelo.ObjOccupant);
+                var response = await _services.Create<ApiResponse>(modelo.ObjOccupant , HttpContext.Session.GetString(SD.SessionToken));
 
                 if (response != null && response.isSucces)
                 {
@@ -111,7 +112,7 @@ namespace MagicPlaceFront.Controllers
             
             //TODO : enviar la lista de sleccion de Habitacion nuevamente
 
-            var res = await _roomServices.GetAll<ApiResponse>();
+            var res = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (res != null && res.isSucces)
             {
@@ -141,7 +142,7 @@ namespace MagicPlaceFront.Controllers
 
             OcuppantUpdateViewModel vmUpdateOccupant = new();
 
-            var response = await _services.GetById<ApiResponse>(IdCard);
+            var response = await _services.GetById<ApiResponse>(IdCard , HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -152,7 +153,7 @@ namespace MagicPlaceFront.Controllers
 
             //obtenemos las habitaciones 
 
-            response = await _roomServices.GetAll<ApiResponse>();
+            response = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -182,7 +183,7 @@ namespace MagicPlaceFront.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await _services.Update<ApiResponse>(modelo.ObjOccupant);
+                var response = await _services.Update<ApiResponse>(modelo.ObjOccupant , HttpContext.Session.GetString(SD.SessionToken));
 
                 if (response != null && response.isSucces)
                 {
@@ -209,7 +210,7 @@ namespace MagicPlaceFront.Controllers
 
             //TODO : enviar la lista de sleccion de Habitacion nuevamente
 
-            var res = await _roomServices.GetAll<ApiResponse>();
+            var res = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (res != null && res.isSucces)
             {
@@ -239,7 +240,7 @@ namespace MagicPlaceFront.Controllers
 
             OcuppanDeleteViewModel vmDeleteOccupant = new();
 
-            var response = await _services.GetById<ApiResponse>(IdCard);
+            var response = await _services.GetById<ApiResponse>(IdCard , HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -250,7 +251,7 @@ namespace MagicPlaceFront.Controllers
 
             //obtenemos las habitaciones 
 
-            response = await _roomServices.GetAll<ApiResponse>();
+            response = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -279,7 +280,7 @@ namespace MagicPlaceFront.Controllers
             if (modelo.ObjOccupant.IdCard > 0)
             {
 
-                var response = await _services.DeleteById<ApiResponse>(modelo.ObjOccupant.IdCard);
+                var response = await _services.DeleteById<ApiResponse>(modelo.ObjOccupant.IdCard, HttpContext.Session.GetString(SD.SessionToken));
                 if (response != null && response.isSucces)
                 {
                     TempData["isSucces"] = "Inquilino Eliminado Exitosamente";
@@ -308,7 +309,7 @@ namespace MagicPlaceFront.Controllers
 
             //TODO : enviar la lista de sleccion de Habitacion nuevamente
 
-            var res = await _roomServices.GetAll<ApiResponse>();
+            var res = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (res != null && res.isSucces)
             {

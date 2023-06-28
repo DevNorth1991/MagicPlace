@@ -1,9 +1,10 @@
 ﻿using MagicPlace_Utilities;
 using MagicPlaceFront.Models;
 using MagicPlaceFront.Services.IServices;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+//using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Newtonsoft.Json;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -11,19 +12,16 @@ namespace MagicPlaceFront.Services
 {
     public class BaseServices : IBaseServices
     {
-
-        public IHttpClientFactory _httpClient { get; set; }
         public ApiResponse responseModel { get; set; }
+        public IHttpClientFactory _httpClient { get; set; }
+     
 
         public BaseServices(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory;
             this.responseModel = new();
+            _httpClient = httpClientFactory;  
 
         }
-
-
-
 
 
         //aqui vamos a implementar el httpClient Factory 
@@ -70,6 +68,15 @@ namespace MagicPlaceFront.Services
 
 
                 HttpResponseMessage apiResponseMessage = null;
+                //aqui enviaremos incrustaremos el token en nuestra api 
+
+                if (!string.IsNullOrEmpty(apiRequest.Token)) {
+
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.Token);
+                
+                }
+
+
                 apiResponseMessage = await client.SendAsync(message);
                 var ApiContent = await apiResponseMessage.Content.ReadAsStringAsync();
                 //var APIResponse = JsonConvert.DeserializeObject<T>(ApiContent);
@@ -80,7 +87,7 @@ namespace MagicPlaceFront.Services
 
                     ApiResponse response = JsonConvert.DeserializeObject<ApiResponse>(ApiContent);
 
-                    if (apiResponseMessage.StatusCode == HttpStatusCode.BadRequest || apiResponseMessage.StatusCode == HttpStatusCode.NotFound)
+                    if (response!= null && apiResponseMessage.StatusCode == HttpStatusCode.BadRequest || apiResponseMessage.StatusCode == HttpStatusCode.NotFound)
                     {
 
                         response.statusCode = HttpStatusCode.BadRequest;
@@ -107,8 +114,8 @@ namespace MagicPlaceFront.Services
 
                 }
 
-                var APIresponse = JsonConvert.DeserializeObject<T>(ApiContent);
-                return APIresponse;
+                var APIResponse = JsonConvert.DeserializeObject<T>(ApiContent);
+                return APIResponse;
 
 
             }

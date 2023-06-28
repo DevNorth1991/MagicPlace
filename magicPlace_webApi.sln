@@ -4,13 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "magicPlace_webApi", "magicPlace_webApi\magicPlace_webApi.csproj", "{B207A447-ECB1-440D-92E0-68C4C0862C09}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicPlaceFront", "MagicPlaceFront\MagicPlaceFront.csproj", "{6DFB5454-5392-496C-83EA-3CB44BC19857}"
 	ProjectSection(ProjectDependencies) = postProject
 		{66CA343D-9DF8-43D9-8767-431FCD6989EE} = {66CA343D-9DF8-43D9-8767-431FCD6989EE}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicPlace_Utilities", "Utilities\MagicPlace_Utilities.csproj", "{66CA343D-9DF8-43D9-8767-431FCD6989EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPlaceFront", "MagicPlaceFront\MagicPlaceFront.csproj", "{6DFB5454-5392-496C-83EA-3CB44BC19857}"
+	ProjectSection(ProjectDependencies) = postProject
+		{66CA343D-9DF8-43D9-8767-431FCD6989EE} = {66CA343D-9DF8-43D9-8767-431FCD6989EE}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPlace_Utilities", "Utilities\MagicPlace_Utilities.csproj", "{66CA343D-9DF8-43D9-8767-431FCD6989EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

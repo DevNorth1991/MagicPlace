@@ -17,34 +17,36 @@ namespace MagicPlaceFront.Services
         }
 
 
-        public Task<T> GetAll<T>()
+        public Task<T> GetAll<T>(string token)
         {
 
             return SendAsync<T>(new ApiRequest()
             {
 
                 ApiTypes = SD.ApiType.GET,
-                ApiUrl = _url + "api/Occupant/"
+                ApiUrl = _url + "api/Occupant/",
+                Token = token
 
             });
 
         }
 
-        public Task<T> GetById<T>(int id)
+        public Task<T> GetById<T>(int id,string token)
         {
 
             return SendAsync<T>(new ApiRequest()
             {
 
                 ApiTypes = SD.ApiType.GET,
-                ApiUrl = _url + "api/Occupant/" + id
+                ApiUrl = _url + "api/Occupant/" + id,
+                Token = token
 
             });
 
 
         }
 
-        public Task<T> Create<T>(OccupantCreateDto dto)
+        public Task<T> Create<T>(OccupantCreateDto dto , string token)
         {
 
             return SendAsync<T>(new ApiRequest()
@@ -52,13 +54,14 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.POST,
                 Data = dto,
-                ApiUrl = _url + "api/Occupant/"
+                ApiUrl = _url + "api/Occupant/",
+                Token = token
 
             });
 
         }
 
-        public Task<T> Update<T>(OccupantUpdateDto dto)
+        public Task<T> Update<T>(OccupantUpdateDto dto , string token)
         {
 
             return SendAsync<T>(new ApiRequest()
@@ -66,20 +69,22 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.PUT,
                 Data = dto,
-                ApiUrl = _url + "api/Occupant/" + dto.IdCard
+                ApiUrl = _url + "api/Occupant/" + dto.IdCard,
+                Token = token
 
             });
 
         }
 
-        public Task<T> DeleteById<T>(int idcard)
+        public Task<T> DeleteById<T>(int idcard ,string token)
         {
 
             return SendAsync<T>(new ApiRequest()
             {
 
                 ApiTypes = SD.ApiType.DELETE,
-                ApiUrl = _url + "api/Occupant/" + idcard
+                ApiUrl = _url + "api/Occupant/" + idcard,
+                Token = token
 
             });
 

@@ -10,7 +10,7 @@ namespace MagicPlaceFront.Models
 
         public ApiType ApiTypes { get; set; } = ApiType.GET;
         public string ApiUrl { get; set; }
-
         public object Data { get; set; }
+        public string Token { get; set; }
     }
 }

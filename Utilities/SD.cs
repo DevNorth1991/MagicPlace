@@ -16,5 +16,7 @@
 
         }
 
+        public static string SessionToken = "JWTToken";
+
     }
 }

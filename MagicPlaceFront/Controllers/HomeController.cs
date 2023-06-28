@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MagicPlace_Utilities;
 using MagicPlaceFront.Models;
 using MagicPlaceFront.Models.Dto;
 using MagicPlaceFront.Services.IServices;
@@ -15,7 +16,7 @@ namespace MagicPlaceFront.Controllers
         private readonly IRoomServices _roomServices;
         private readonly IMapper _mapper;
 
-        public HomeController(ILogger<HomeController> logger , IRoomServices roomServices, IMapper mapper)
+        public HomeController(ILogger<HomeController> logger, IRoomServices roomServices, IMapper mapper)
         {
             _logger = logger;
             _roomServices = roomServices;
@@ -26,7 +27,7 @@ namespace MagicPlaceFront.Controllers
         {
 
             List<RoomDto> roomList = new();
-            var response = await _roomServices.GetAll<ApiResponse>();
+            var response = await _roomServices.GetAll<ApiResponse>(HttpContext.Session.GetString(SD.SessionToken));
 
             if (response != null && response.isSucces)
             {
@@ -36,7 +37,8 @@ namespace MagicPlaceFront.Controllers
                 //le pasamos la lista a la vista 
                 return View(roomList);
             }
-            return NotFound();
+            // return NotFound();
+            return View(roomList);
         }
 
         public IActionResult Privacy()

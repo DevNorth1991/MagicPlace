@@ -40,14 +40,14 @@ namespace magicPlace_webApi.Controllers
             
                 _response.statusCode= HttpStatusCode.BadRequest;
                 _response.isSucces = false;
-                _response.ErrorMessages.Add("User name Or Password ainvalidos");
+                _response.ErrorMessages.Add("User name Or Password invalidos");
                 return BadRequest(_response);
             
             }
             _response.isSucces = true;
             _response.statusCode = HttpStatusCode.OK;
             _response.Results = loginResponse;
-            return Ok(loginResponse);
+            return Ok(_response);
 
 
         }
