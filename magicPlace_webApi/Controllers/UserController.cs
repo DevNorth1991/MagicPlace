@@ -7,8 +7,9 @@ using System.Net;
 
 namespace magicPlace_webApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     public class UserController : ControllerBase
     {
 
@@ -34,15 +35,16 @@ namespace magicPlace_webApi.Controllers
 
 
             var loginResponse = await _userRepo.Login(loginRequestDto);
-           
-            if (loginResponse == null || string.IsNullOrEmpty(loginResponse.Token)) { 
-            
-            
-                _response.statusCode= HttpStatusCode.BadRequest;
+
+            if (loginResponse == null || string.IsNullOrEmpty(loginResponse.Token))
+            {
+
+
+                _response.statusCode = HttpStatusCode.BadRequest;
                 _response.isSucces = false;
                 _response.ErrorMessages.Add("User name Or Password invalidos");
                 return BadRequest(_response);
-            
+
             }
             _response.isSucces = true;
             _response.statusCode = HttpStatusCode.OK;

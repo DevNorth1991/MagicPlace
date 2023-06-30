@@ -13,10 +13,11 @@ using magicPlace_webApi.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MagicPlace_WebApi.Controllers
+namespace magicPlace_webApi.Controllers.V2
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("2.0")]
     public class OccupantController : ControllerBase
     {
 
@@ -61,7 +62,7 @@ namespace MagicPlace_WebApi.Controllers
                 _logger.LogInformation("Trayendo lista de inquilinos");
 
 
-                IEnumerable<Occupant> occupaList = await _occupaRepository.GetAll(incluir:"ObjRoom");
+                IEnumerable<Occupant> occupaList = await _occupaRepository.GetAll(incluir: "ObjRoom");
 
                 //guardamnos el resultado en el objeto Results da la clase ApiResponses
 
@@ -77,7 +78,7 @@ namespace MagicPlace_WebApi.Controllers
                 _response.isSucces = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return (_response);
+            return _response;
 
         }
 
@@ -141,7 +142,7 @@ namespace MagicPlace_WebApi.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles ="admin")]
+        [Authorize(Roles = "admin")]
 
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -203,7 +204,7 @@ namespace MagicPlace_WebApi.Controllers
                 {
 
 
-                    ModelState.AddModelError("ErrorMessages", "No existe Habitacion con el ID Numero = " + occupaCreateDto.RoomId );
+                    ModelState.AddModelError("ErrorMessages", "No existe Habitacion con el ID Numero = " + occupaCreateDto.RoomId);
                     return BadRequest(ModelState);
 
                 }
@@ -253,7 +254,7 @@ namespace MagicPlace_WebApi.Controllers
                     return BadRequest(_response);
                 }
 
-              
+
                 var occupa = await _occupaRepository.getById(r => r.IdCard == id);
 
                 if (occupa == null)
@@ -308,7 +309,7 @@ namespace MagicPlace_WebApi.Controllers
 
                 }
 
-     
+
                 //name validation
 
                 if (await _occupaRepository.getById(r => r.NameOccupant.ToLower() == occupaUpdateDto.NameOccupant.ToLower()) != null)
@@ -317,7 +318,7 @@ namespace MagicPlace_WebApi.Controllers
 
                     ModelState.AddModelError("ErrorMessages", "Ya existe un inquilino con ese nombre");
 
-                    
+
                     return BadRequest(ModelState);
 
                 }
@@ -366,7 +367,7 @@ namespace MagicPlace_WebApi.Controllers
 
             }
             catch (Exception ex)
-            {   
+            {
 
                 _response.isSucces = false;
                 _response.ErrorMessages = new List<string> { ex.ToString() };
@@ -378,7 +379,7 @@ namespace MagicPlace_WebApi.Controllers
 
 
 
-         
+
 
         [HttpPatch("{id:int}")]
         [Authorize(Roles = "admin")]

@@ -1,26 +1,33 @@
-﻿
+﻿using magicPlace_webApi.DataStore;
 using magicPlace_webApi.Models.Dto;
+using magicPlace_webApi.DataStore;
 using magicPlace_webApi.Models;
+using magicPlace_webApi.Models.Dto;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using magicPlace_webApi.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MagicPlace_WebApi.Controllers
+namespace magicPlace_webApi.Controllers.V1
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class PlaceController : ControllerBase
+    [ApiVersion("1.0")]
+    public class OccupantController : ControllerBase
     {
 
 
         //activamos el servicio de logger 
-        private readonly ILogger<PlaceController> _logger;
+        private readonly ILogger<OccupantController> _logger;
         //activamos el servicio DBcontext
         //  private readonly ApplicationDbContext _context;
         private readonly IRoomRepository _roomRepository;
+        private readonly IOccupantRepository _occupaRepository;
         //automapper injection 
 
         private readonly IMapper _mapper;
@@ -29,35 +36,37 @@ namespace MagicPlace_WebApi.Controllers
 
         protected ApiResponse _response;
 
-        public PlaceController(ILogger<PlaceController> logger, IRoomRepository roomRepository, IMapper mapper)
+        public OccupantController(ILogger<OccupantController> logger, IRoomRepository roomRepository, IOccupantRepository occupaRepository, IMapper mapper)
         {
 
             _logger = logger;
             _roomRepository = roomRepository;
+            _occupaRepository = occupaRepository;
             _mapper = mapper;
             _response = new();
+
 
         }
 
 
 
-         [HttpGet]
-         [Authorize]
+        [HttpGet]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<ApiResponse>> GetRooms()
+        public async Task<ActionResult<ApiResponse>> GetOccupants()
         {
 
             try
             {
 
-                _logger.LogInformation("Trayendo lista de Habitaciones");
+                _logger.LogInformation("Trayendo lista de inquilinos");
 
 
-                IEnumerable<Room> roomList = await _roomRepository.GetAll();
+                IEnumerable<Occupant> occupaList = await _occupaRepository.GetAll(incluir: "ObjRoom");
 
                 //guardamnos el resultado en el objeto Results da la clase ApiResponses
 
-                _response.Results = _mapper.Map<IEnumerable<RoomDto>>(roomList);
+                _response.Results = _mapper.Map<IEnumerable<OccupantDto>>(occupaList);
                 _response.statusCode = HttpStatusCode.OK;
 
                 return Ok(_response);
@@ -69,18 +78,19 @@ namespace MagicPlace_WebApi.Controllers
                 _response.isSucces = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return (_response);
+            return _response;
 
         }
 
 
 
-        [HttpGet("{id:int}", Name = "GetRoom")]
+        [HttpGet("{id:int}", Name = "GetOccupant")]
         [Authorize]
+
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ApiResponse>> getRoom(int id)
+        public async Task<ActionResult<ApiResponse>> getOccupant(int id)
         {
 
 
@@ -90,15 +100,17 @@ namespace MagicPlace_WebApi.Controllers
 
                 if (id == 0)
                 {
-                    _logger.LogError("error al traer habitacion por id");
+                    _logger.LogError("error al traer el inquilino con el DNI = " + id);
                     _response.statusCode = HttpStatusCode.BadRequest;
                     _response.isSucces = false;
                     return BadRequest(_response);
                 }
 
-                var room = await _roomRepository.getById(r => r.Id == id);
+                //buscamos por dni
 
-                if (room == null)
+                var occupa = await _occupaRepository.getById(r => r.IdCard == id, incluir: "ObjRoom");
+
+                if (occupa == null)
                 {
                     _response.statusCode = HttpStatusCode.NotFound;
                     _response.isSucces = false;
@@ -107,7 +119,7 @@ namespace MagicPlace_WebApi.Controllers
                 }
 
 
-                _response.Results = _mapper.Map<RoomDto>(room);
+                _response.Results = _mapper.Map<OccupantDto>(occupa);
                 _response.statusCode = HttpStatusCode.OK;
                 _response.isSucces = true;
                 return Ok(_response);
@@ -130,12 +142,13 @@ namespace MagicPlace_WebApi.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles ="admin")]
+        [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<ApiResponse>> CreateRoom([FromBody] RoomCreateDto roomCreateDto)
+        public async Task<ActionResult<ApiResponse>> CreateOccupant(OccupantCreateDto occupaCreateDto)
         {
 
 
@@ -143,11 +156,11 @@ namespace MagicPlace_WebApi.Controllers
             {
 
 
-                if (roomCreateDto == null)
+                if (occupaCreateDto == null)
                 {
                     _response.statusCode = HttpStatusCode.BadRequest;
                     _response.isSucces = false;
-                    _response.Results = roomCreateDto;
+                    _response.Results = occupaCreateDto;
                     return BadRequest(_response);
                 }
 
@@ -155,31 +168,56 @@ namespace MagicPlace_WebApi.Controllers
                 {
                     _response.statusCode = HttpStatusCode.BadRequest;
                     _response.isSucces = false;
-                    _response.Results = roomCreateDto;
+                    _response.Results = occupaCreateDto;
                     return BadRequest(_response);
 
                 }
 
-                //name validation
+                //dni validation
 
-                if (await _roomRepository.getById(r => r.Name.ToLower() == roomCreateDto.Name.ToLower()) != null)
+                if (await _occupaRepository.getById(r => r.IdCard == occupaCreateDto.IdCard) != null)
                 {
 
 
-                    ModelState.AddModelError("ErrorMessages", "La habitacion con ese Nombre ya existe!!!");
+                    ModelState.AddModelError("ErrorMessages", "Ya existe un inquilino con ese DNI= " + occupaCreateDto.IdCard);
+
+
+                    return BadRequest(ModelState); ;
+
+                }
+
+                ////name validation
+
+                if (await _occupaRepository.getById(r => r.NameOccupant.ToLower() == occupaCreateDto.NameOccupant.ToLower()) != null)
+                {
+
+
+                    ModelState.AddModelError("ErrorMessages", "Ya existe un inquilino con ese nombre");
+
                     return BadRequest(ModelState);
 
                 }
 
-                Room modelo = _mapper.Map<Room>(roomCreateDto);
-                modelo.CreationDate = DateTime.Now;
-                modelo.UpdateTime = DateTime.Now;
-                await _roomRepository.Create(modelo);
+                //validamos que exista un Numero de habitacion para tal inquilino
+
+                if (await _roomRepository.getById(r => r.Id == occupaCreateDto.RoomId) == null)
+                {
+
+
+                    ModelState.AddModelError("ErrorMessages", "No existe Habitacion con el ID Numero = " + occupaCreateDto.RoomId);
+                    return BadRequest(ModelState);
+
+                }
+
+                Occupant modelo = _mapper.Map<Occupant>(occupaCreateDto);
+                modelo.DateCreationOcccupant = DateTime.Now;
+                modelo.DateUpdateOcccupant = DateTime.Now;
+                await _occupaRepository.Create(modelo);
                 _response.Results = modelo;
                 _response.isSucces = true;
                 _response.statusCode = HttpStatusCode.Created;
 
-                return CreatedAtRoute("GetRoom", new { id = modelo.Id }, _response);
+                return CreatedAtRoute("GetOccupant", new { id = modelo.IdCard }, _response);
 
 
             }
@@ -195,16 +233,14 @@ namespace MagicPlace_WebApi.Controllers
 
         }
 
-
-
-
         [HttpDelete("{id:int}")]
         [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
 
-        public async Task<IActionResult> DeleteRoom(int id)//la interfaz IAction results No puede devolver un tipo 
+        public async Task<IActionResult> DeleteOccupant(int id)//la interfaz IAction results No puede devolver un tipo 
         {
 
             try
@@ -218,17 +254,17 @@ namespace MagicPlace_WebApi.Controllers
                     return BadRequest(_response);
                 }
 
-                // var room = RoomStore.RoomList.FirstOrDefault(r => r.Id == id);
-                var room = await _roomRepository.getById(r => r.Id == id);
 
-                if (room == null)
+                var occupa = await _occupaRepository.getById(r => r.IdCard == id);
+
+                if (occupa == null)
                 {
                     _response.statusCode = HttpStatusCode.NotFound;
                     _response.isSucces = false;
                     return NotFound(_response);
                 }
 
-                await _roomRepository.Delete(room);
+                await _occupaRepository.Delete(occupa);
                 _response.isSucces = true;
                 _response.statusCode = HttpStatusCode.NoContent;
 
@@ -250,18 +286,20 @@ namespace MagicPlace_WebApi.Controllers
         //volvemos a utilizar Un IActionResult ya que retornaremos un no content y no pprecisaremos el modelo 
 
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
 
-        public async Task<IActionResult> UpdateRoom(int id, [FromBody] RoomUpdateDto roomUpdateDto)
+        public async Task<IActionResult> UpdateOccupant(int id, [FromBody] OccupantUpdateDto occupaUpdateDto)
         {
 
             try
             {
 
 
-                if (roomUpdateDto == null || id != roomUpdateDto.Id)
+                if (occupaUpdateDto == null || id != occupaUpdateDto.IdCard)
                 {
 
                     _response.statusCode = HttpStatusCode.BadRequest;
@@ -271,10 +309,37 @@ namespace MagicPlace_WebApi.Controllers
 
                 }
 
-                //obtenemos el registro a editar 
-                var roomTemp = await _roomRepository.getById(r => r.Id == id, tracked: false);
 
-                if (roomTemp == null)
+                //name validation
+
+                if (await _occupaRepository.getById(r => r.NameOccupant.ToLower() == occupaUpdateDto.NameOccupant.ToLower()) != null)
+                {
+
+
+                    ModelState.AddModelError("ErrorMessages", "Ya existe un inquilino con ese nombre");
+
+
+                    return BadRequest(ModelState);
+
+                }
+
+                //validamos que exista un Numero de habitacion para tal inquilino
+
+                if (await _roomRepository.getById(r => r.Id == occupaUpdateDto.RoomId) == null)
+                {
+
+
+                    ModelState.AddModelError("ErrorMessages", "No existe Habitacion con el ID = " + occupaUpdateDto.RoomId);
+
+                    return BadRequest(ModelState);
+
+                }
+
+
+                //obtenemos el registro a editar 
+                var occupaTemp = await _occupaRepository.getById(r => r.IdCard == id, tracked: false);
+
+                if (occupaTemp == null)
                 {
 
                     _response.statusCode = HttpStatusCode.NotFound;
@@ -285,9 +350,15 @@ namespace MagicPlace_WebApi.Controllers
 
 
 
-                Room modelo = _mapper.Map<Room>(roomUpdateDto);
-                modelo.CreationDate = roomTemp.CreationDate;
-                await _roomRepository.Update(modelo);
+
+                Occupant modelo = _mapper.Map<Occupant>(occupaUpdateDto);
+                modelo.DateCreationOcccupant = occupaTemp.DateCreationOcccupant;
+
+
+
+
+
+                await _occupaRepository.Update(modelo);
                 _response.Results = modelo;
                 _response.statusCode = HttpStatusCode.NoContent;
                 _response.isSucces = true;
@@ -307,13 +378,17 @@ namespace MagicPlace_WebApi.Controllers
         }
 
 
+
+
+
         [HttpPatch("{id:int}")]
         [Authorize(Roles = "admin")]
+
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
 
-        public async Task<IActionResult> PatchRoom(int id, JsonPatchDocument<RoomUpdateDto> patchDto)
+        public async Task<IActionResult> PatchRoom(int id, JsonPatchDocument<OccupantUpdateDto> patchDto)
         {
 
             try
@@ -328,11 +403,11 @@ namespace MagicPlace_WebApi.Controllers
                 }
 
                 //obtenemos el registro a editar 
-                var room = await _roomRepository.getById(r => r.Id == id, tracked: false);
+                var occupa = await _occupaRepository.getById(r => r.IdCard == id, tracked: false);
 
-                RoomUpdateDto roomUpdateDto = _mapper.Map<RoomUpdateDto>(room);
+                OccupantUpdateDto occupaUpdateDto = _mapper.Map<OccupantUpdateDto>(occupa);
 
-                if (room == null)
+                if (occupa == null)
                 {
 
                     _response.statusCode = HttpStatusCode.BadRequest;
@@ -341,7 +416,7 @@ namespace MagicPlace_WebApi.Controllers
 
                 }
 
-                patchDto.ApplyTo(roomUpdateDto, ModelState);
+                patchDto.ApplyTo(occupaUpdateDto, ModelState);
 
                 if (!ModelState.IsValid)
                 {
@@ -352,11 +427,11 @@ namespace MagicPlace_WebApi.Controllers
 
                 }
 
-                Room roomModified = _mapper.Map<Room>(roomUpdateDto);
-                await _roomRepository.Update(roomModified);
+                Occupant occupaModified = _mapper.Map<Occupant>(occupaUpdateDto);
+                await _occupaRepository.Update(occupaModified);
                 _response.statusCode = HttpStatusCode.NoContent;
                 _response.isSucces = true;
-                _response.Results = roomModified;
+                _response.Results = occupaModified;
 
                 return Ok(_response);
             }

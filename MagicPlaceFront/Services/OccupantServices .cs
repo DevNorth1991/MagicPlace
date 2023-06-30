@@ -24,7 +24,7 @@ namespace MagicPlaceFront.Services
             {
 
                 ApiTypes = SD.ApiType.GET,
-                ApiUrl = _url + "api/Occupant/",
+                ApiUrl = _url + "api/v1/Occupant/",
                 Token = token
 
             });
@@ -38,7 +38,7 @@ namespace MagicPlaceFront.Services
             {
 
                 ApiTypes = SD.ApiType.GET,
-                ApiUrl = _url + "api/Occupant/" + id,
+                ApiUrl = _url + "api/v1/Occupant/" + id,
                 Token = token
 
             });
@@ -54,7 +54,7 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.POST,
                 Data = dto,
-                ApiUrl = _url + "api/Occupant/",
+                ApiUrl = _url + "api/v1/Occupant/",
                 Token = token
 
             });
@@ -69,7 +69,7 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.PUT,
                 Data = dto,
-                ApiUrl = _url + "api/Occupant/" + dto.IdCard,
+                ApiUrl = _url + "api/v1/Occupant/" + dto.IdCard,
                 Token = token
 
             });
@@ -83,7 +83,7 @@ namespace MagicPlaceFront.Services
             {
 
                 ApiTypes = SD.ApiType.DELETE,
-                ApiUrl = _url + "api/Occupant/" + idcard,
+                ApiUrl = _url + "api/v1/Occupant/" + idcard,
                 Token = token
 
             });

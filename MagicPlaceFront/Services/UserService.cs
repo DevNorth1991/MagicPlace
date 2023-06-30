@@ -27,7 +27,7 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.POST,
                 Data = loginRequestDto,
-                ApiUrl= _url + "api/user/login"
+                ApiUrl= _url + "api/v1/user/login"
 
 
             }) ;
@@ -40,7 +40,7 @@ namespace MagicPlaceFront.Services
 
                 ApiTypes = SD.ApiType.POST,
                 Data = registerRequestDto,
-                ApiUrl = _url + "/api/User/register"
+                ApiUrl = _url + "/api/v1/User/register"
 
 
             });
