@@ -13,7 +13,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(options => {
+
+    options.CacheProfiles.Add("Default30", new CacheProfile() { 
+    
+    
+            Duration = 30
+    
+    
+    });
+    options.CacheProfiles.Add("Default15", new CacheProfile()
+    {
+
+
+        Duration = 15
+
+
+    });
+
+
+}).AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -119,6 +138,16 @@ builder.Services.AddVersionedApiExplorer(options => {
 
 
 });
+
+//adding caching services
+
+builder.Services.AddResponseCaching(options =>
+{
+
+
+
+});
+
 
 var app = builder.Build();
 

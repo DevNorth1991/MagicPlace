@@ -1,4 +1,5 @@
 ﻿using magicPlace_webApi.DataStore;
+using magicPlace_webApi.Models.Specifications;
 using magicPlace_webApi.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -40,7 +41,7 @@ namespace magicPlace_webApi.Repository
 
 
 
-        public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>>? filtro = null,string? incluir = null)
+        public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>>? filtro = null, string? incluir = null)
         {
 
 
@@ -52,22 +53,61 @@ namespace magicPlace_webApi.Repository
                 query = query.Where(filtro);
             }
 
-            if (incluir != null) {//"Room,OtroModelo"
-                
+            if (incluir != null)
+            {//"Room,OtroModelo"
+
                 //vamos  a separar y limpiar los prametros por medio de un foreach
 
-                foreach (var includeProps in incluir.Split(new char[] {','},StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProps in incluir.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProps);
-                    
+
                 }
 
-            
+
             }
 
             return await query.ToListAsync();
 
         }
+
+
+
+        //get All Paginated 
+
+        public PagedList<T> GetAllPaginated(Parameters parametros, Expression<Func<T, bool>>? filtro = null, string? incluir = null)
+        {
+
+
+            IQueryable<T> query = dbSet;
+
+            if (filtro != null)
+            {
+
+                query = query.Where(filtro);
+            }
+
+            if (incluir != null)
+            {//"Room,OtroModelo"
+
+                //vamos  a separar y limpiar los prametros por medio de un foreach
+
+                foreach (var includeProps in incluir.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProps);
+
+                }
+
+
+            }
+
+            return PagedList<T>.ToPagedList(query, parametros.PageNumber, parametros.PageSize);
+
+        }
+
+
+
+        //traer por id 
 
         public async Task<T> getById(Expression<Func<T, bool>>? filtro = null, bool tracked = true, string? incluir = null)
         {
@@ -120,5 +160,7 @@ namespace magicPlace_webApi.Repository
             dbSet.Remove(entidad);
             await Save();
         }
+
+       
     }
 }

@@ -12,5 +12,18 @@ namespace MagicPlaceFront.Models
         public string ApiUrl { get; set; }
         public object Data { get; set; }
         public string Token { get; set; }
+        public Parameters parameters { get; set; } 
+        
     }
+
+
+
+    public class Parameters
+    {
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+
+    }
+
+
 }

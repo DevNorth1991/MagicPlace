@@ -31,6 +31,21 @@ namespace MagicPlaceFront.Services
 
         }
 
+        public Task<T> GetAllPaginated<T>(string token,int pageNumber = 1 , int pageSize = 4)
+        {
+            //recordmos que ahora la url es : https://localhost:7001/api/v1/Place/roomsPaginated?PageNumber=1&PageSize=4
+            return SendAsync<T>(new ApiRequest()
+            {
+
+                ApiTypes = SD.ApiType.GET,
+                ApiUrl = _roomUrl + "api/v1/Place/roomsPaginated",
+                Token = token,
+                parameters = new Parameters() { PageNumber = pageNumber , PageSize = pageSize}
+
+            });
+
+        }
+
         public Task<T> GetById<T>(int id, string token)
         {
 

@@ -21,6 +21,8 @@ namespace MagicPlaceFront.Models
 
         public object Results { get; set; }
 
+        public int TotalPages { get; set; }
+
 
     }
 }

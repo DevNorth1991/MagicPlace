@@ -24,6 +24,12 @@ namespace magicPlace_webApi.Models
 
         public object Results { get; set; }
 
+        //agregamos el atributo total de paginas 
+
+        public int TotalPages { get; set; }
+
+
+
 
     }
 }

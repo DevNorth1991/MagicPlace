@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Web;
 
 namespace MagicPlaceFront.Services
 {
@@ -35,7 +36,26 @@ namespace MagicPlaceFront.Services
                 //creamos el Messages
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
-                message.RequestUri = new Uri(apiRequest.ApiUrl);
+
+
+                if (apiRequest.parameters == null)
+                {
+
+                    message.RequestUri = new Uri(apiRequest.ApiUrl);
+
+                }
+                else { 
+                
+                    // TODO  aqui vamos a construir la Url de nuevo 
+                var builder = new UriBuilder(apiRequest.ApiUrl);
+                    var query = HttpUtility.ParseQueryString(builder.Query);
+                    query["PageNumber"] = apiRequest.parameters.PageNumber.ToString();
+                    query["PageSize"] = apiRequest.parameters.PageSize.ToString();
+                    builder.Query = query.ToString();
+                    string url = builder.ToString();
+                    message.RequestUri = new Uri(url);
+                }
+                
 
 
                 //validamso si el mensaje lleva o no datos

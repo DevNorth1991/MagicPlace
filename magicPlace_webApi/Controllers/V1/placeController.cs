@@ -7,6 +7,7 @@ using AutoMapper;
 using magicPlace_webApi.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
+using magicPlace_webApi.Models.Specifications;
 
 namespace magicPlace_webApi.Controllers.V1
 {
@@ -43,6 +44,7 @@ namespace magicPlace_webApi.Controllers.V1
 
 
         [HttpGet]
+        [ResponseCache(CacheProfileName ="Default30")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ApiResponse>> GetRooms()
@@ -74,6 +76,40 @@ namespace magicPlace_webApi.Controllers.V1
 
         }
 
+
+
+        //get all paginated 
+
+        [HttpGet("roomsPaginated")]
+        [ResponseCache(CacheProfileName = "Default30")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<ApiResponse> GetRoomsPaginated([FromQuery] Parameters parameters)
+        {
+
+            try
+            {
+
+                _logger.LogInformation("Trayendo lista de Habitaciones");
+
+
+                var  roomList =  _roomRepository.GetAllPaginated(parameters);
+                //guardamnos el resultado en el objeto Results da la clase ApiResponses
+
+                _response.Results = _mapper.Map<IEnumerable<RoomDto>>(roomList);
+                _response.statusCode = HttpStatusCode.OK;
+                _response.TotalPages = roomList.metaData.TotalPages;
+                return Ok(_response);
+
+            }
+            catch (Exception ex)
+            {
+
+                _response.isSucces = false;
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
+            }
+            return _response;
+
+        }
 
 
         [HttpGet("{id:int}", Name = "GetRoom")]

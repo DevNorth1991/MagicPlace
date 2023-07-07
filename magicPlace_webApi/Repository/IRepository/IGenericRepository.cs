@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using magicPlace_webApi.Models.Specifications;
+using System.Linq.Expressions;
 
 namespace magicPlace_webApi.Repository.IRepository
 {
@@ -14,6 +15,11 @@ namespace magicPlace_webApi.Repository.IRepository
         //vamos a crear el metodo Obtener todos pero que puede o no recibir una expresion linq como filtro
         Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>>? filtro = null,string? incluir=null);
 
+
+
+        //vamos a crear el metodo Obtener todos pero que puede o no recibir una expresion linq como filtro pero 
+        //que a su vez va a implementar el paginado
+        PagedList<T> GetAllPaginated(Parameters parametros ,Expression<Func<T, bool>>? filtro = null, string? incluir = null);
 
 
         //get by id ,,. recordemos que este metodo tambien va  ahacer uso del hasNoTraking asi que vamos a ponerselo como
