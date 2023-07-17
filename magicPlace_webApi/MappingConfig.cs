@@ -34,6 +34,10 @@ namespace magicPlace_webApi
 
             CreateMap<Occupant, OccupantUpdateDto>().ReverseMap();
 
+            //el siguiente Map se hace con fines de resguardar datos de usuario al trabajar con Identity
+
+            CreateMap<ApplicationUser, UserDto>().ReverseMap();
+
         }
 
     }

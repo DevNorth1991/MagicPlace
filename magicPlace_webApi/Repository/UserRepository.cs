@@ -1,11 +1,14 @@
-﻿using magicPlace_webApi.DataStore;
+﻿using AutoMapper;
+using magicPlace_webApi.DataStore;
 using magicPlace_webApi.Models;
 using magicPlace_webApi.Models.Dto;
 using magicPlace_webApi.Repository.IRepository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualBasic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq.Expressions;
 using System.Security.AccessControl;
 using System.Security.Claims;
 using System.Text;
@@ -19,21 +22,38 @@ namespace magicPlace_webApi.Repository
 
         private readonly ApplicationDbContext _db;
 
+        //para acceder a trabajar con los ususrios mediante Identity necesitamos inyectar UserManager 
+        //y enviarle comom parametro el modelo de usuario que hereda de Identity 
+
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        //vamos a inyectar mapper
+        private readonly IMapper _mapper;
+
         private string _secretKey;
-        public UserRepository(ApplicationDbContext db, IConfiguration configuration)
+
+        public UserRepository(ApplicationDbContext db,
+                                IConfiguration configuration,
+                                UserManager<ApplicationUser> userManager,
+                                IMapper mapper,
+                                RoleManager<IdentityRole> roleManager)
         {
 
             _db = db;
             _secretKey = configuration.GetValue<string>("ApiSettings:Secret");
-
+            _userManager = userManager;
+            _mapper = mapper;
+            _roleManager = roleManager;
         }
 
-       
+
 
         //metodo mejorado  
         public async Task<bool> IsUserUnique(string username)
         {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.UserName.ToLower() == username.ToLower());
+            var user = await _db.ApplicationUsers.FirstOrDefaultAsync(u => u.UserName.ToLower() == username.ToLower());
 
             if (user == null)
             {
@@ -46,10 +66,11 @@ namespace magicPlace_webApi.Repository
 
         public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
         {
+            var user = await _db.ApplicationUsers.SingleOrDefaultAsync(u => u.UserName.ToLower() == loginRequestDto.UserName.ToLower());
 
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.UserName.ToLower() == loginRequestDto.UserName.ToLower() &&
-                                                                u.UserPassword == loginRequestDto.Password);
-            if (user == null)
+            bool isValid = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+            if (user == null || isValid == false)
             {
 
                 return new LoginResponseDto()
@@ -61,8 +82,12 @@ namespace magicPlace_webApi.Repository
                 };
             }
 
-            //Create Token 
+            //si el usuario existe verificamos el rol del mismo tebems que tener en cuenta que ahora los roles se guardan en 
+            //una tabla diferente 
 
+            var roles = await _userManager.GetRolesAsync(user);
+
+            //Create Token 
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_secretKey);
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -71,8 +96,8 @@ namespace magicPlace_webApi.Repository
                 Subject = new ClaimsIdentity(new Claim[] {
 
 
-                    new Claim(ClaimTypes.Name,user.Id.ToString()),
-                    new Claim(ClaimTypes.Role,user.UserRol)
+                    new Claim(ClaimTypes.Name,user.UserName),
+                    new Claim(ClaimTypes.Role,roles.FirstOrDefault())
 
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
@@ -86,10 +111,8 @@ namespace magicPlace_webApi.Repository
 
             LoginResponseDto loginResponseDto = new()
             {
-
-
                 Token = tokenHandler.WriteToken(token),
-                User = user,
+                User = _mapper.Map<UserDto>(user),
             };
 
             return loginResponseDto;
@@ -97,22 +120,68 @@ namespace magicPlace_webApi.Repository
 
         }
 
-        public async Task<User> Register(RegisterRequestDto registerRequestDto)
+        public async Task<UserDto> Register(RegisterRequestDto registerRequestDto)
         {
-            User user = new()
+            ApplicationUser user = new()
             {
                 UserName = registerRequestDto.UserName,
-                UserEmail = registerRequestDto.UserEmail,
-                UserPassword = registerRequestDto.UserPassword,
-                UserRol = registerRequestDto.UserRol,
+                NameUserIdentity = registerRequestDto.UserName,
+                Email = registerRequestDto.UserEmail,
+                NormalizedEmail = registerRequestDto.UserEmail.ToUpper(),
 
             };
 
-            await _db.Users.AddAsync(user);
-            await _db.SaveChangesAsync();
-            //antes de devolverlo vamos a borra el password
-            user.UserPassword = "";
-            return user;
+            //a aprtir de aca usamos a user manager 
+
+            try
+            {
+
+                var createNewUser = await _userManager.CreateAsync(user, registerRequestDto.UserPassword);
+
+                if (createNewUser.Succeeded)
+                {
+
+                    //verificamos que el rol exista si el rol no existe lo creamos 
+
+                    if (!_roleManager.RoleExistsAsync("admin").GetAwaiter().GetResult())
+                    {
+
+                        await _roleManager.CreateAsync(new IdentityRole("admin"));
+                        await _roleManager.CreateAsync(new IdentityRole("cliente"));
+
+
+                    }
+
+
+
+
+                    //si se ha creado el usuario con exito le agregamos un rol 
+
+                    await _userManager.AddToRoleAsync(user, "admin");
+                    var userApp = await _db.ApplicationUsers.FirstOrDefaultAsync(user => user.UserName == registerRequestDto.UserName);
+
+                    //retornmaos solo el dto que queremos para mostrar 
+                    return _mapper.Map<UserDto>(userApp);
+
+                }
+                else
+                {
+
+                    return _mapper.Map<UserDto>(user);
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return new UserDto();
+
+
         }
     }
 }

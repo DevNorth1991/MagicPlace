@@ -519,3 +519,8 @@ D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFro
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\zh-CN\Humanizer.resources.dll
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\zh-Hans\Humanizer.resources.dll
 D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Devnorth\1_DotNet\1_backend\1_microservicios_web_api\magicPlace\MagicPlaceFront\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

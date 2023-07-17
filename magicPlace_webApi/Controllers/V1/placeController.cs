@@ -8,6 +8,7 @@ using magicPlace_webApi.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using magicPlace_webApi.Models.Specifications;
+using Microsoft.AspNetCore.Authentication;
 
 namespace magicPlace_webApi.Controllers.V1
 {
@@ -45,7 +46,7 @@ namespace magicPlace_webApi.Controllers.V1
 
         [HttpGet]
         [ResponseCache(CacheProfileName ="Default30")]
-        [Authorize]
+        [Authorize(Roles ="admin" , AuthenticationSchemes ="Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ApiResponse>> GetRooms()
         {
@@ -113,7 +114,7 @@ namespace magicPlace_webApi.Controllers.V1
 
 
         [HttpGet("{id:int}", Name = "GetRoom")]
-        [Authorize]
+        [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -167,7 +168,7 @@ namespace magicPlace_webApi.Controllers.V1
 
 
         [HttpPost]
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -236,7 +237,7 @@ namespace magicPlace_webApi.Controllers.V1
 
 
         [HttpDelete("{id:int}")]
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -287,6 +288,7 @@ namespace magicPlace_webApi.Controllers.V1
         //volvemos a utilizar Un IActionResult ya que retornaremos un no content y no pprecisaremos el modelo 
 
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -345,7 +347,7 @@ namespace magicPlace_webApi.Controllers.V1
 
 
         [HttpPatch("{id:int}")]
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace MagicPlaceFront.Controllers
@@ -39,11 +40,18 @@ namespace MagicPlaceFront.Controllers
 
                 LoginResponseDto responseDto = JsonConvert.DeserializeObject<LoginResponseDto>(Convert.ToString(response.Results));
 
+
+                //aqui mediante la libreria Extraeremos el token del responseDto
+
+                var handler = new JwtSecurityTokenHandler();
+                var jwt = handler.ReadJwtToken(responseDto.Token);
+
+
                 //configuracion de los Claims esto es para mantener el user name y el role en todo Momento 
 
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
-                identity.AddClaim(new Claim(ClaimTypes.Name, responseDto.User.UserName));
-                identity.AddClaim(new Claim(ClaimTypes.Role, responseDto.User.UserRol));
+                identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(tok => tok.Type == "name").Value));
+                identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(tok => tok.Type == "role").Value));
                 var principal = new ClaimsPrincipal(identity);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 

@@ -10,7 +10,7 @@ namespace magicPlace_webApi.Repository.IRepository
 
         Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto);
 
-        Task<User> Register(RegisterRequestDto registerRequestDto);
+        Task<UserDto> Register(RegisterRequestDto registerRequestDto);
 
 
 

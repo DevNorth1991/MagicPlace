@@ -1,10 +1,13 @@
 using magicPlace_webApi;
 using magicPlace_webApi.DataStore;
+using magicPlace_webApi.Models;
 using magicPlace_webApi.Repository;
 using magicPlace_webApi.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -108,6 +111,11 @@ builder.Services.AddAuthentication(x =>
 //agregamos el servicio de la base de datos 
 
 builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
+
+//Aregamos el servicio de Identity 
+
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
+                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 //servicio de automapper
 

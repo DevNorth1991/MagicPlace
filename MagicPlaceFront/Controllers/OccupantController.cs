@@ -4,10 +4,12 @@ using MagicPlaceFront.Models;
 using MagicPlaceFront.Models.Dto;
 using MagicPlaceFront.Models.ViewModel;
 using MagicPlaceFront.Services.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
+using System.Data;
 using System.Reflection;
 
 namespace MagicPlaceFront.Controllers
@@ -30,7 +32,7 @@ namespace MagicPlaceFront.Controllers
 
 
 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> IndexOccupants()
         {
 
@@ -51,7 +53,7 @@ namespace MagicPlaceFront.Controllers
 
 
         //Creacion de nuevo ocupante 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> AddOccupant()
         {
 
@@ -136,7 +138,7 @@ namespace MagicPlaceFront.Controllers
 
         //update Occupant 
 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateOccupant(int IdCard)
         {
 
@@ -234,7 +236,7 @@ namespace MagicPlaceFront.Controllers
 
 
         //delete Occupant 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteOccupant(int IdCard)
         {
 

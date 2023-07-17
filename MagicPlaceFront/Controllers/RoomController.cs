@@ -3,6 +3,7 @@ using MagicPlace_Utilities;
 using MagicPlaceFront.Models;
 using MagicPlaceFront.Models.Dto;
 using MagicPlaceFront.Services.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using NuGet.Packaging.Signing;
@@ -23,6 +24,8 @@ namespace MagicPlaceFront.Controllers
 
 
         }
+
+        [Authorize(Roles ="admin")]
         public async Task<IActionResult> IndexRoom()
         {
 
@@ -46,6 +49,7 @@ namespace MagicPlaceFront.Controllers
         //Crear nueva Habitacion
         //Get------> ya que a los metodos cuando no se les define un tipo por defecto son GET
 
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> CreateRoom()
         {
             return View();
@@ -75,6 +79,7 @@ namespace MagicPlaceFront.Controllers
 
         }
 
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateRoom(int id)
         {
             var response = await _roomServices.GetById<ApiResponse>(id, HttpContext.Session.GetString(SD.SessionToken));
@@ -116,7 +121,7 @@ namespace MagicPlaceFront.Controllers
 
 
         //delete Room
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteRoom(int id)
         {
             var response = await _roomServices.GetById<ApiResponse>(id, HttpContext.Session.GetString(SD.SessionToken));
